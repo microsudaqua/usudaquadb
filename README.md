@@ -49,17 +49,24 @@
 
   Workflow to run the pipeline **EDNA v 1.0** using **GNU-Linux SO**, for that use the scripts that are in the folder [Scripts](scripts)
   1. Start a new project by the edition of the file **`make.new.project.sh`**:
+<<<<<<< HEAD
      - Indicate the path to the directory where you want to create the new project (e.g. `~/Documents/`)
      - The name of the project (e.g. `MY_PROJECT`) 
      - The number of threads to use (e.g. `NCORES=4`)
      - and the primers used for sequencing (e.g, `PRIMERF="AYGTTG..." PRIMERR="TGGCY..."`).
+=======
+     - Path to the directory where you want to create the new project (e.g. `~/Documents/`)
+     - Name of the project (e.g. `MY_PROJECT`) 
+     - Number of threads to use (e.g. `NCORES=4`) 
+     - Primers used for sequencing (e.g, `PRIMERF="AYGTTG..." PRIMERR="TGGCY..."`).
+>>>>>>> c54b65731b0d58e601f4970253572910b160ecbd
 
   2. Execute the script:
      ```sh
      sh make.new.project.sh 
      ``` 
 
-     This will create a new folder with the project name which will contain the next structure:
+     This will create a new folder with the project name previously indicated. This folder will contain the next structure:
  
      ```sh
      MY PROJECT
@@ -129,7 +136,7 @@
 
      \* For more information of this parameters visit the [DADA2 web page](https://benjjneb.github.io/dada2/index.html)
  
-     - Execution:
+     - Execute the script dada2.slurm.sh:
  
      ```sh
      sh dada2.slurm.sh
@@ -150,7 +157,11 @@
   9. Assign taxonomy:
     
      - Edit the `Blast_Taxonomy.sh` scrip:
+<<<<<<< HEAD
        - Path to the working directory (i.e. `07-taxonomy`)
+=======
+       - Path to the working directory (i.e. `07-taxonomy`) 
+>>>>>>> c54b65731b0d58e601f4970253572910b160ecbd
        - Number of threads to use (e.g. `NCORES=4`)
        - Path to the reference database (db, for example you can use SILVA database) 
        - Filename of the fasta file
@@ -166,7 +177,7 @@
  We would like to acknowledge to the technician of the [Pirayu Cluster][Pirayu]. The samples from the [&micro;SudAqua project][microsudaqua] were analyzed using computational resurce of the **Pirayu cluster**, which was funded by **Agencia Santafesina de Ciencia, Tecnología e Innovación (ASACTEI), Gobierno de la Provincia de Santa Fe**, through the project AC-00010-18, Resolución No117/14. This cluster is part of the **Sistema Nacional de Computación de Alto Desempeño del Min. Ciencia y Tecnología de la Rep. Argentina**.
  
 ### Contributors
- Metz Sebastian (<metz.seba91@gmail.com>) and Huber Maria Paula (<mariapaulahuber@gmail.com>)
+ Metz Sebastian (<metz.seba91@gmail.com>) and Huber Paula (<mariapaulahuber@gmail.com>)
 
 ### Publications
  "µSudAqua[db]: a georeferenced rRNA amplicon database of aquatic microbiomes from South America" Sebastian Metz, Paula Huber, Erick Mateus-Barros, ..., Hugo Sarmento. Submitted.
@@ -177,6 +188,7 @@
  [Silva]: https://www.arb-silva.de/
  [scripts]: scripts/
  [blast]: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/
+<<<<<<< HEAD
  [suddb]: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d.tar.gz
  [ecor]: https://tinyurl.com/usudaqua/usudaqua%5bdb%5d/
  [suddb2]: https://tinyurl.com/usudaqua/usudaqua%5bdb%5d.tar.gz
@@ -187,3 +199,5 @@
  [table1]: http://200.9.237.240:9005/usudaqua/Table1_Metz_Huber_etal2022.xlsx
  [table2]: http://200.9.237.240:9005/usudaqua/Table2_Metz_Huber_etal2022.xlsx
  [table3]: http://200.9.237.240:9005/usudaqua/Table3_Metz_Huber_etal2022.xlsx
+=======
+>>>>>>> c54b65731b0d58e601f4970253572910b160ecbd
