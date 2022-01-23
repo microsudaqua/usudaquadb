@@ -51,7 +51,7 @@
   1. Start a new project by the edition of the file **`make.new.project.sh`**:
      - Path to the directory where you want to create the new project (e.g. `~/Documents/`)
      - Name of the project (e.g. `MY_PROJECT`) 
-     - Number of threads (e.g. `NCORES=4`) to use
+     - Number of threads to use (e.g. `NCORES=4`) 
      - Primers used for sequencing (e.g, `PRIMERF="AYGTTG..." PRIMERR="TGGCY..."`).
 
   2. Execute the script:
@@ -150,8 +150,8 @@
   9. Assign taxonomy:
     
      - Edit the `Blast_Taxonomy.sh` scrip:
-       - Path to the working directory (i.e. `07-taxonomy`), 
-       - Number of cores to be used (`NCORES`), 
+       - Path to the working directory (i.e. `07-taxonomy`) 
+       - Number of threads to use (e.g. `NCORES=4`)
        - Path to the reference database (db, for example you can use SILVA database) 
        - Filename of the fasta file
      - Execution:
