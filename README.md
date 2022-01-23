@@ -129,7 +129,7 @@
 
      \* For more information of this parameters visit the [DADA2 web page](https://benjjneb.github.io/dada2/index.html)
  
-     - Execution:
+     - Execute the script dada2.slurm.sh:
  
      ```sh
      sh dada2.slurm.sh
