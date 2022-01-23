@@ -49,17 +49,17 @@
 
   Workflow to run the pipeline **EDNA v 1.0** using **GNU-Linux SO**, for that use the scripts that are in the folder [Scripts](scripts)
   1. Start a new project by the edition of the file **`make.new.project.sh`**:
-     - Indicate the path to the directory where you want to create the new project (e.g. `~/Documents/`)
-     - The name of the project (e.g. `MY_PROJECT`) 
-     - The number of threads (e.g. `NCORES=4`) to use
-     - and the primers used for sequencing (e.g, `PRIMERF="AYGTTG..." PRIMERR="TGGCY..."`).
+     - Path to the directory where you want to create the new project (e.g. `~/Documents/`)
+     - Name of the project (e.g. `MY_PROJECT`) 
+     - Number of threads (e.g. `NCORES=4`) to use
+     - Primers used for sequencing (e.g, `PRIMERF="AYGTTG..." PRIMERR="TGGCY..."`).
 
   2. Execute the script:
      ```sh
      sh make.new.project.sh 
      ``` 
 
-     This will create a new folder with the project name which will contain the next structure:
+     This will create a new folder with the project name previously indicated. This folder will contain the next structure:
  
      ```sh
      MY PROJECT
