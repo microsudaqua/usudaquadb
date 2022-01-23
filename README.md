@@ -18,19 +18,19 @@
 ### Data Availability
  The data is avaliable at https://tinyurl.com/usudaqua:
  * Raw dataset **µSudAqua[db]**:
-   * Complete datasets compressed: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d.tar.gz
-   * Separated by eco-region: https://tinyurl.com/usudaqua/usudaqua%5bdb%5d/
+   * [Complete datasets compressed](suddb)
+   * [Separated by eco-region](ecor)
  
  * Raw dataset **µSudAqua[db.sp]**: 
-   * Compressed files: https://tinyurl.com/usudaqua/usudaqua%5bdb%5d.tar.gz
-   * Separated by eco-region: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/
-   * ASV table: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/usudaqua_rawtable_V1.tsv.gz
-   * Taxonomy annotation: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/usudaqua_rawtaxonomy_blast_silva132_nr99_V1.tsv.gz
-   * Multi-Fasta file: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/usudaqua_rawseqs_V1.fasta.gz
+   * [Compressed files](suddb2)
+   * [Separated by eco-region](ecor2)
+   * [ASV table](asvt)
+   * [Taxonomy annotation](tax)
+   * [Multi-Fasta file](fasta)
  
-  * **Table 1:** Table detailing the metadata associated to the samples from the databases. Each sample was assigned to a geographical location, ecoregion and environmental type  (e.g. shallows and deep lakes, rivers, streams, reservoir, swamps).  Futhermore, we recovered the procedures adopted for sampling and sequencing. Public accession information  (i.e: bioproject, accession number, references, etc) of each sample are also showed.
-  * **Table 2:** µSudAqua[db.sp] database samples description by ecoregions. In all cases V3-V4 region of gen 16S rRNA was sequenced with illumina MiSeq using the primers 341F (`5'-CCTACGGGNGGCWGCAG-3'`) and 805R (`5'-GACT ACHVGGGTATCTAATCC-3'`).
-  * **Table 3:**  Overview of the technical validation from the µSudAqua[db.sp] database samples. Number of reads and ASVs resulting from the data processing. 
+  * [**Table 1:**](table1) Table detailing the metadata associated to the samples from the databases. Each sample was assigned to a geographical location, ecoregion and environmental type  (e.g. shallows and deep lakes, rivers, streams, reservoir, swamps).  Futhermore, we recovered the procedures adopted for sampling and sequencing. Public accession information  (i.e: bioproject, accession number, references, etc) of each sample are also showed.
+  * [**Table 2:**](table2) µSudAqua[db.sp] database samples description by ecoregions. In all cases V3-V4 region of gen 16S rRNA was sequenced with illumina MiSeq using the primers 341F (`5'-CCTACGGGNGGCWGCAG-3'`) and 805R (`5'-GACT ACHVGGGTATCTAATCC-3'`).
+  * [**Table 3:**](table3)  Overview of the technical validation from the µSudAqua[db.sp] database samples. Number of reads and ASVs resulting from the data processing. 
 
 ### Data processing and integration
 
@@ -51,7 +51,7 @@
   1. Start a new project by the edition of the file **`make.new.project.sh`**:
      - Indicate the path to the directory where you want to create the new project (e.g. `~/Documents/`)
      - The name of the project (e.g. `MY_PROJECT`) 
-     - The number of threads (e.g. `NCORES=4`) to use
+     - The number of threads to use (e.g. `NCORES=4`)
      - and the primers used for sequencing (e.g, `PRIMERF="AYGTTG..." PRIMERR="TGGCY..."`).
 
   2. Execute the script:
@@ -106,17 +106,17 @@
      sh check_quality.sh
      ```
 
-     \* This return two different figures, **ERRORS_PLOTS.pdf** (**Figure 1**) and **quality_plot.pdf** (**Figure 2**). These are useful to define the parameters to be used in DADA2 pipeline. The **Figure 1** shows the percentaje of sequences that will pass according to the quality threshold (**MaxEE**) and the sequences lengths. The **Figure 2** shows the quality from the first three samples (the patterns will be similar for all the samples sequenced in the same run). 
+     \* This return two different figures, **Error_plot.pdf** (**Figure 1**) and **Quality_plots.pdf** (**Figure 2**). These are useful to define the parameters to be used in DADA2 pipeline. The **Figure 1** shows the percentaje of sequences that will pass according to the quality threshold (**MaxEE**) and the sequences lengths. The **Figure 2** shows the quality from the first three samples (the patterns will be similar for all the samples sequenced in the same run). 
 
      Moreover, in the folder `05-quality_control` you will find the **resume.txt** file (tab-separated table), with the min, mean and max length of the sequences, and at the last column if the sample fail the quality control (number of reads < 10K). This value can be modified in the script **resume_quality.py** [line 64].
 
      ![figure1](plots/ERRORS_PLOTS.png "Errors plot")
 
-     **Figure 1**: Quality plots for the forward and reverse samples.
+     **Figure 1**: Error plots for the forward and reverse samples.
     
      ![figure2](plots/quality_plot.png "Fastqc plot of the samples")
     
-     **Figure 2**: FASTQC plots of the first three samples
+     **Figure 2**: Quality plots of the first three samples
 
   7. Run DADA2 pipeline: 
      - modify the filtering parameters from the `dada2.sh` script:
@@ -150,8 +150,8 @@
   9. Assign taxonomy:
     
      - Edit the `Blast_Taxonomy.sh` scrip:
-       - Path to the working directory (i.e. `07-taxonomy`), 
-       - Number of cores to be used (`NCORES`), 
+       - Path to the working directory (i.e. `07-taxonomy`)
+       - Number of threads to use (e.g. `NCORES=4`)
        - Path to the reference database (db, for example you can use SILVA database) 
        - Filename of the fasta file
      - Execution:
@@ -177,3 +177,13 @@
  [Silva]: https://www.arb-silva.de/
  [scripts]: scripts/
  [blast]: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/
+ [suddb]: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d.tar.gz
+ [ecor]: https://tinyurl.com/usudaqua/usudaqua%5bdb%5d/
+ [suddb2]: https://tinyurl.com/usudaqua/usudaqua%5bdb%5d.tar.gz
+ [ecor2]: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/
+ [asvt]: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/usudaqua_rawtable_V1.tsv.gz
+ [tax]: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/usudaqua_rawtaxonomy_blast_silva132_nr99_V1.tsv.gz
+ [fasta]: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/usudaqua_rawseqs_V1.fasta.gz
+ [table1]: http://200.9.237.240:9005/usudaqua/Table1_Metz_Huber_etal2022.xlsx
+ [table2]: http://200.9.237.240:9005/usudaqua/Table2_Metz_Huber_etal2022.xlsx
+ [table3]: http://200.9.237.240:9005/usudaqua/Table3_Metz_Huber_etal2022.xlsx
