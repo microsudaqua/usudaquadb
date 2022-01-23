@@ -166,7 +166,7 @@
  We would like to acknowledge to the technician of the [Pirayu Cluster][Pirayu]. The samples from the [&micro;SudAqua project][microsudaqua] were analyzed using computational resurce of the **Pirayu cluster**, which was funded by **Agencia Santafesina de Ciencia, Tecnología e Innovación (ASACTEI), Gobierno de la Provincia de Santa Fe**, through the project AC-00010-18, Resolución No117/14. This cluster is part of the **Sistema Nacional de Computación de Alto Desempeño del Min. Ciencia y Tecnología de la Rep. Argentina**.
  
 ### Contributors
- Metz Sebastian (<metz.seba91@gmail.com>) and Huber Maria Paula (<mariapaulahuber@gmail.com>)
+ Metz Sebastian (<metz.seba91@gmail.com>) and Huber Paula (<mariapaulahuber@gmail.com>)
 
 ### Publications
  "µSudAqua[db]: a georeferenced rRNA amplicon database of aquatic microbiomes from South America" Sebastian Metz, Paula Huber, Erick Mateus-Barros, ..., Hugo Sarmento. Submitted.
