@@ -16,7 +16,8 @@
  * Publications
 
 ### Data Availability
- The data is avaliable at https://tinyurl.com/usudaqua:
+ The data is avaliable at https://microsudaqua.netlify.app/en/#database ![image](https://user-images.githubusercontent.com/65190576/151662525-0145ee6c-1180-45ce-9835-116f634e9b1c.png)
+:
  * Raw dataset **µSudAqua[db]**:
    * [Complete datasets compressed](suddb)
    * [Separated by eco-region](ecor)
