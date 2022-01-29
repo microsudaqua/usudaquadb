@@ -28,9 +28,9 @@
    * [Taxonomy annotation](tax)
    * [Multi-Fasta file](fasta)
  
-  * [**Table 1:**](table1) Table detailing the metadata associated to the samples from the databases. Each sample was assigned to a geographical location, ecoregion and environmental type  (e.g. shallows and deep lakes, rivers, streams, reservoir, swamps).  Futhermore, we recovered the procedures adopted for sampling and sequencing. Public accession information  (i.e: bioproject, accession number, references, etc) of each sample are also showed.
-  * [**Table 2:**](table2) µSudAqua[db.sp] database samples description by ecoregions. In all cases V3-V4 region of gen 16S rRNA was sequenced with illumina MiSeq using the primers 341F (`5'-CCTACGGGNGGCWGCAG-3'`) and 805R (`5'-GACT ACHVGGGTATCTAATCC-3'`).
-  * [**Table 3:**](table3)  Overview of the technical validation from the µSudAqua[db.sp] database samples. Number of reads and ASVs resulting from the data processing. 
+  * [**Table 1:**](table1) Metadata associated with the samples from the databases. Each sample was assigned to a geographical location, ecoregion and environmental type (e.g. shallow and deep lakes, rivers, streams, reservoirs, swamps). Furthermore, we recovered the procedures adopted for sampling and sequencing. Public accession information (i.e: bioproject, accession number, references, etc) of each sample are also shown.
+  * [**Table 2:**](table2) µSudAqua[db.sp] database sample description by ecoregions. In all cases V3-V4 region of gen 16S rRNA was sequenced with illumina MiSeq using the primers 341F (5'-CCTACGGGNGGCWGCAG-3') and 805R (5'-GACTACHVGGGTATCTAATCC-3').
+  * [**Table 3:**](table3) Overview of the technical validation from the µSudAqua[db.sp] database samples. Number of reads and ASVs resulting from the data processing.  
 
 ### Data processing and integration
 
