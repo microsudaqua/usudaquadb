@@ -20,17 +20,14 @@
  * Raw dataset **µSudAqua[db]**:
    * [Complete datasets compressed](suddb)
    * [Separated by eco-region](ecor)
- 
+   * [XML file](xml): Metadata associated to the samples from the **µSudAqua[db]** database. Doi: 10.6084/m9.figshare.19223076.
  * Raw dataset **µSudAqua[db.sp]**: 
    * [Compressed files](suddb2)
    * [Separated by eco-region](ecor2)
-   * [ASV table](asvt)
-   * [Taxonomy annotation](tax)
-   * [Multi-Fasta file](fasta)
+   * [ASV table V1](asvt) doi: 10.6084/m9.figshare.19224144.
+   * [Taxonomy annotation V1](tax) doi: 10.6084/m9.figshare.19224144.
+   * [Multi-Fasta file V1](fasta) doi: 10.6084/m9.figshare.19224144.
  
-  * [**Table 1:**](table1) Metadata associated with the samples from the databases. Each sample was assigned to a geographical location, ecoregion and environmental type (e.g. shallow and deep lakes, rivers, streams, reservoirs, swamps). Furthermore, we recovered the procedures adopted for sampling and sequencing. Public accession information (i.e: bioproject, accession number, references, etc) of each sample are also shown.
-  * [**Table 2:**](table2) µSudAqua[db.sp] database sample description by ecoregions. In all cases V3-V4 region of gen 16S rRNA was sequenced with illumina MiSeq using the primers 341F (5'-CCTACGGGNGGCWGCAG-3') and 805R (5'-GACTACHVGGGTATCTAATCC-3').
-  * [**Table 3:**](table3) Overview of the technical validation from the µSudAqua[db.sp] database samples. Number of reads and ASVs resulting from the data processing.  
 
 ### Data processing and integration
 
@@ -184,6 +181,4 @@ This work was funded by the São Paulo Research Foundation (Fundação de Amparo
  [asvt]: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/usudaqua_rawtable_V1.tsv.gz
  [tax]: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/usudaqua_rawtaxonomy_blast_silva132_nr99_V1.tsv.gz
  [fasta]: https://tinyurl.com/usudaqua/usudaqua%5bdb.sp%5d/usudaqua_rawseqs_V1.fasta.gz
- [table1]: http://200.9.237.240:9005/usudaqua/Table1_Metz_Huber_etal2022.xlsx
- [table2]: http://200.9.237.240:9005/usudaqua/Table2_Metz_Huber_etal2022.xlsx
- [table3]: http://200.9.237.240:9005/usudaqua/Table3_Metz_Huber_etal2022.xlsx
+ [xml]:https://tinyurl.com/usudaqua/microsudaqua_data_February_2022.xml
