@@ -18,15 +18,15 @@
 ### Data Availability
  The data is avaliable at https://microsudaqua.netlify.app/en/#database:
  * Raw dataset **µSudAqua[db]**:
-   * [Complete datasets compressed](suddb)
-   * [Separated by eco-region](ecor)
-   * [XML file](xml): Metadata associated to the samples from the **µSudAqua[db]** database. Doi: 10.6084/m9.figshare.19223076.
+   * [Complete datasets compressed][suddb]
+   * [Separated by eco-region][ecor]
+   * [XML file][xml]: Metadata associated to the samples from the **µSudAqua[db]** database. Doi: 10.6084/m9.figshare.19223076.
  * Raw dataset **µSudAqua[db.sp]**: 
-   * [Compressed files](suddb2)
-   * [Separated by eco-region](ecor2)
-   * [ASV table V1](asvt) doi: 10.6084/m9.figshare.19224144.
-   * [Taxonomy annotation V1](tax) doi: 10.6084/m9.figshare.19224144.
-   * [Multi-Fasta file V1](fasta) doi: 10.6084/m9.figshare.19224144.
+   * [Compressed files][suddb2]
+   * [Separated by eco-region][ecor2]
+   * [ASV table V1][asvt] doi: 10.6084/m9.figshare.19224144.
+   * [Taxonomy annotation V1][tax] doi: 10.6084/m9.figshare.19224144.
+   * [Multi-Fasta file V1][fasta] doi: 10.6084/m9.figshare.19224144.
  
 
 ### Data processing and integration
