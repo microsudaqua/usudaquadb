@@ -27,17 +27,17 @@
    
 #### Downloading data (example 22.2 Humid Chaco)
 To download the raw data for 22.2 Humid Chaco used in the __&micro;SudAqua[db.sp]__ first downlad the table microsudaqua_metadata_V1.0_July2022.tsv and execute the following script in R:
-   ```R
-        library(tidyverse)
-        table <- read_tsv("microsudaqua_metadata_V1.0_July2022.tsv")
-        list <- table %>%
-        filter(SubEcoregion == "22.2 Humid Chaco") # change to the name of the sub-ecoregion samples that you would like to downlad
+```R
+   library(tidyverse)
+   table <- read_tsv("microsudaqua_metadata_V1.0_July2022.tsv")
+   list <- table %>%
+   filter(SubEcoregion == "22.2 Humid Chaco") # change to the name of the sub-ecoregion samples that you would like to downlad
 
-        for (i in 1:nrow(list)) {
-        system2("wget", args = list$Download_ftp_R1[i], wait = F)
-        system2("wget", args = list$Download_ftp_R2[i], wait = F)
-        }
-   ```
+   for (i in 1:nrow(list)) {
+    system2("wget", args = list$Download_ftp_R1[i], wait = F)
+    system2("wget", args = list$Download_ftp_R2[i], wait = F)
+    }
+```
 This will download 59 samples related to the 22.2 Humid Chaco sub-ecoregion.
 
 
@@ -54,11 +54,6 @@ This will download 59 samples related to the 22.2 Humid Chaco sub-ecoregion.
   * Cutadapt 1.18+
   * Blast 2.5+
 
- #### Downloading data (e.g: 23.1 Northern Rolling)
- To download the raw data for 23.1 Northern Rolling used in the &micro;SudAqua[db.sp] first downlad the table microsudaqua_metadata_V1.0_July2022.tsv and execute the following script in R:
- ```R
- library(tidyverse)
- table <- read_tsv
  #### Running
 
   Workflow to run the pipeline **EDNA v 1.0** using **GNU-Linux SO**, for that use the scripts that are in the folder [Scripts](scripts)
