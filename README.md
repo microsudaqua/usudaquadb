@@ -1,7 +1,7 @@
 ## µSudAqua[db]: a georeferenced rRNA amplicon database of aquatic microbiomes from South America 
 
 ### Summary
- The biogeography of bacterial communities is a key topic in Microbial Ecology. Regarding continental water, most studies are carried out in the northern hemisphere, leaving a gap on microorganism’s diversity patterns on a global scale. South America harbours approximatelly one third of the world's total fresh water resources, and is one of these understudied regions. To fill this gap, we compiled 16S rRNA amplicon sequencing data of microbial communities across South America continental water ecosystems, presenting the first database **µSudAqua[db]**. The database contains over 872 georeferenced samples from 9 different ecoregions with contextual environmental information. For its integration and validation we constructed a curated database (**µSudAqua[db.sp]**) using samples sequenced in Illumina MiSeq platform using the same prokaryote universal primers. This comprised ~60% of the total georeferenced samples of the **µSudAqua[db]**. This compilation was carried out in the scope of the µSudAqua collaborative network and represents one of the most complete databases of continental water microbial communities from South America.
+ The biogeography of bacterial communities is a key topic in Microbial Ecology. Regarding continental water, most studies are carried out in the northern hemisphere, leaving a gap on microorganism’s diversity patterns on a global scale. South America harbours approximatelly one third of the world's total fresh water resources, and is one of these understudied regions. To fill this gap, we compiled 16S rRNA amplicon sequencing data of microbial communities across South America continental water ecosystems, presenting the first database **µSudAqua[db]**. The database contains over 866 georeferenced samples from 9 different ecoregions with contextual environmental information. For its integration and validation we constructed a curated database (**µSudAqua[db.sp]**) using samples sequenced in Illumina MiSeq platform using the same prokaryote universal primers. This comprised ~60% of the total georeferenced samples of the **µSudAqua[db]**. This compilation was carried out in the scope of the µSudAqua collaborative network and represents one of the most complete databases of continental water microbial communities from South America.
 
 ***
 
@@ -16,18 +16,30 @@
  * Publications
 
 ### Data Availability
- The data is avaliable at https://microsudaqua.netlify.app/en/#database:
+ The data is avaliable at zenodo.org - DOI:10.5281/zenodo.6657490:
+ microsudaqua_data_V1.0_July2022.zip contain five different files:
  * Raw dataset **µSudAqua[db]**:
-   * [Complete datasets compressed][suddb]
-   * [Separated by eco-region][ecor]
-   * [XML and TSV file][xml]: Metadata associated to the samples from the **µSudAqua[db]** database. Doi: 10.6084/m9.figshare.19223076.
- * Raw dataset **µSudAqua[db.sp]**: 
-   * [Compressed files][suddb2]
-   * [Separated by eco-region][ecor2]
-   * [ASV table V1][asvt] doi: 10.6084/m9.figshare.19224144.
-   * [Taxonomy annotation V1][tax] doi: 10.6084/m9.figshare.19224144.
-   * [Multi-Fasta file V1][fasta] doi: 10.6084/m9.figshare.19224144.
- 
+   * microsudaqua_metadata_V1.0_July2022.tsv: metadata associated with the samples used to build __&micro;SudAqua[db]__
+   * microsudaqua_rawtable_V1.0_July2022.tsv: number of reads in each sample __&micro;SudAqua[db.sp]__
+   * microsudaqua_rawseqs_V1.0_July2022.fasta: nucleotide sequences of each ASV from __&micro;SudAqua[db.sp]__
+   * microsudaqua_rawtaxonomy_blast_silva132_nr99_V1.0_July2022.tsv: taxonomic classification of each ASV from __&micro;SudAqua[db.sp]__
+   * microsudaqua_bacteria_filtered_50reads_with_taxonomy_V1.0_July2022.tsv: Bacterial filtered ASVs, with more than 50 reads in at least three samples from __&micro;SudAqua[db.sp]__
+   
+#### Downloading data (example 22.2 Humid Chaco)
+To download the raw data for 22.2 Humid Chaco used in the __&micro;SudAqua[db.sp]__ first downlad the table microsudaqua_metadata_V1.0_July2022.tsv and execute the following script in R:
+   ```R
+        library(tidyverse)
+        table <- read_tsv("microsudaqua_metadata_V1.0_July2022.tsv")
+        list <- table %>%
+        filter(SubEcoregion == "22.2 Humid Chaco") # change to the name of the sub-ecoregion samples that you would like to downlad
+
+        for (i in 1:nrow(list)) {
+        system2("wget", args = list$Download_ftp_R1[i], wait = F)
+        system2("wget", args = list$Download_ftp_R2[i], wait = F)
+        }
+   ```
+This will download 59 samples related to the 22.2 Humid Chaco sub-ecoregion.
+
 
 ### Data processing and integration
 
@@ -37,11 +49,16 @@
  #### Prerequisites
   * Python 2.7+
   * R 3.5+
-  * USEARCH 10+ 
+  * USEARCH 10 
   * DADA2 1.04+
   * Cutadapt 1.18+
   * Blast 2.5+
 
+ #### Downloading data (e.g: 23.1 Northern Rolling)
+ To download the raw data for 23.1 Northern Rolling used in the &micro;SudAqua[db.sp] first downlad the table microsudaqua_metadata_V1.0_July2022.tsv and execute the following script in R:
+ ```R
+ library(tidyverse)
+ table <- read_tsv
  #### Running
 
   Workflow to run the pipeline **EDNA v 1.0** using **GNU-Linux SO**, for that use the scripts that are in the folder [Scripts](scripts)
@@ -166,7 +183,7 @@ This work was funded by the São Paulo Research Foundation (Fundação de Amparo
  Metz Sebastian (<metz.seba91@gmail.com>) and Huber Paula (<mariapaulahuber@gmail.com>)
 
 ### Publications
- "µSudAqua[db]: a georeferenced rRNA amplicon database of aquatic microbiomes from South America" Sebastian Metz, Paula Huber, Erick Mateus-Barros, ..., Hugo Sarmento. Submitted.
+ "A georeferenced rRNA amplicon database of aquatic microbiomes from South America. Submitted.
 
 
  [microsudaqua]: https://microsudaqua.netlify.app/
