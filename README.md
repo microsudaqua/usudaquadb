@@ -16,7 +16,7 @@
  * Publications
 
 ### Data Availability
- The data is avaliable at zenodo.org - DOI:10.5281/zenodo.6657490:
+ The data is avaliable at zenodo.org - DOI:10.5281/zenodo.6802178:
  microsudaqua_data_V1.0_July2022.zip contain five different files:
  * Raw dataset **µSudAqua[db]**:
    * microsudaqua_metadata_V1.0_July2022.tsv: metadata associated with the samples used to build __&micro;SudAqua[db]__
