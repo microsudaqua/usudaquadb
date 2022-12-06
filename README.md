@@ -178,7 +178,7 @@ This work was funded by the São Paulo Research Foundation (Fundação de Amparo
  Metz Sebastian (<metz.seba91@gmail.com>) and Huber Paula (<mariapaulahuber@gmail.com>)
 
 ### Publications
- "A georeferenced rRNA amplicon database of aquatic microbiomes from South America. Submitted.
+Metz, S., P. Huber, E. Mateus-Barros, P. C. Junger, M. de Melo, I. L. Bagatini, I. Izaguirre, M. Câmara dos Reis, M. E. Llames, V. Accattatis, M. V. Quiroga, M. Devercelli, M. R. Schiaffino, J. P. Niño-García, M. Bastidas Navarro, B. Modenutti, H. Vieira, M. Saraceno, C. A. Sabio y García, E. Pereira, A. González-Revello, C. Piccini, F. Unrein, C. Alonso & H. Sarmento, 2022. A georeferenced rRNA amplicon database of aquatic microbiomes from South America. Scientific Data 9(1):565 (https://doi.org/10.1038/s41597-022-01665-z)
 
 
  [microsudaqua]: https://microsudaqua.netlify.app/
