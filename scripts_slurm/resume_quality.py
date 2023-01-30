@@ -14,7 +14,8 @@ import shutil
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("-i", "--input", help="path to author name", type = str, required = True)
+parser.add_argument("-i", "--input", help="path to author name", 
+type = str, required = True)
 
 args = parser.parse_args()
 
@@ -27,9 +28,8 @@ head = "Name\tHave Primers[Y/N]\tN of R1 Sequences\tN of R2 Sequences\tMean Leng
 
 for i in glob.glob("{}/05-quality_control/*.primers".format(path)):
 	entry = []
-	#print(i)
 	first = re.search("{}/05-quality_control/(.*)_R[1,2].clipped.fastq.primers".format(path),i)
-#Comprobar si tiene primers
+	#Comprobar si tiene primers
 	if first:
 		entry.append(first.group(1))
 		if open(i, "r").read() != "":
@@ -43,16 +43,12 @@ for i in glob.glob("{}/05-quality_control/*.primers".format(path)):
 dont_fails = []	
 search = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
 for i in table_out.keys():
-	for j in glob.glob("{}/05-quality_control/*_info.txt".format(path)): #{}/04-quality_control/output/
+	for j in glob.glob("{}/05-quality_control/*_info.txt".format(path)): 
 		if re.search(i, j):
-			#print(j)
 			data = open(j, "r").read()
-			#print(data)
 			#Busqueda de seqs
-			if re.search("([0-9]+\.[0-9])k\sseqs\,",data):
-				seqs = re.search("([0-9]+\.[0-9])k\sseqs\,",data).group(1)
-			else:
-				seqs = re.search("([0-9]+)\sseqs\,",data).group(1)			
+			seqs = re.search("([0-9]+\.{0,1}[0-9]{0,})k\sseqs\,",
+			data).group(1)
 			#Busqueda de Mean length
 			mean = re.search("med\s([0-9]+)\,",data).group(1)			
 			#Busqueda de min length
@@ -101,13 +97,8 @@ head = "length\t0.5\t1\t2\n"
 for j in glob.glob("{}/05-quality_control/*_eest2.txt".format(path)):
 	data = open(j, "r").read()
 	data = re.sub(" +","\t", data)
-#	save = open(j, "w")
-#	save.write(data)
-#	save.close()
-#	print(data)
 	for i in data.split("\n"):
 		line = i.split("\t")
-#		print("LENGTH= ",len(line))		
 		if len(line) == 8:
 			new = "{}\t{}\t{}\t{}\n".format(line[1],line[3].split("%")[0],line[5].split("%")[0],line[7].split("%")[0])
 			if re.search("_R1", j):
@@ -127,7 +118,6 @@ r1.close()
 r2.close()
 			
 new = "{}/05-quality_control/successful/".format(path)
-#os.mkdir(new)
 for i in dont_fails:
 	old = "{}/04-clipping_primers/clipped/{}_R1.clipped.fastq".format(path,i)
 	shutil.copy("{}".format(old),"{}".format(new))	
